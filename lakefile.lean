@@ -29,7 +29,7 @@ def runCmd (cmd : String) (args : Array String) : ScriptM Bool := do
   return hasError
 
 script build do
-  if ← runCmd "lake" #["exe", "mdgen", "Src", "md"] then return 1
+  if ← runCmd "lake" #["exe", "mdgen", "Src", "md/build"] then return 1
   if ← runCmd "lake" #["exe", "import_all", "Src"] then return 1
   if ← runCmd "mdbook" #["build"] then return 1
   return 0
