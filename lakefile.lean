@@ -33,3 +33,7 @@ script build do
   if ← runCmd "lake" #["exe", "import_all", "Src"] then return 1
   if ← runCmd "mdbook" #["build"] then return 1
   return 0
+
+script check do
+  if ← runCmd "lake" #["exe", "import_check", "Src"] then return 1
+  return 0

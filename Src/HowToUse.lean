@@ -2,9 +2,9 @@
 
 0. Install mdbook and Lean.
 
-1. Clone this repository. Alternatively, select "Use this template" from the GitHub web UI. 
+1. Clone this repository. Alternatively, select "Use this template" from the GitHub web UI.
 
-2. Change the directory name `Src` if you want. At the same time, replace `Src` in `lakefile.lean`, `ci.yml`, `deploy.yml` and `filePlay.js`. And run `lake update`.
+2. Change the directory name `Src` if you want. At the same time, replace `Src` in `lakefile.lean` and `filePlay.js`. And run `lake update`.
 
 3. If you want to use mathlib, make changes to `ci.yml` to run `lake exe cache get`.
 

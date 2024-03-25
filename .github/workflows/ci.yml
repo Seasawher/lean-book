@@ -26,7 +26,7 @@ jobs:
           echo "$HOME/.elan/bin" >> $GITHUB_PATH
 
       - name: Check lib completeness
-        run: lake exe import_check Src
+        run: lake run check
 
       - name: Cache dependencies
         uses: actions/cache@v3
