@@ -11,6 +11,7 @@ create-missing = false
 build-dir = "book"
 
 [output.html]
+no-section-label = false
 git-repository-url = "https://github.com/Seasawher/lean-book"
 edit-url-template = "https://raw.githubusercontent.com/Seasawher/lean-book/main/{path}"
 additional-js = [
