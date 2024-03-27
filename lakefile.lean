@@ -10,10 +10,7 @@ package «Src» where
 
 @[default_target]
 lean_lib «Src» where
-  -- add library configuration options here
-
-require «import-all» from git
-  "https://github.com/Seasawher/import-all" @ "main"
+  globs := #[.submodules `Src] -- Build all files in the `Src` directory.
 
 require mdgen from git
   "https://github.com/Seasawher/mdgen" @ "main"
@@ -30,10 +27,5 @@ def runCmd (cmd : String) (args : Array String) : ScriptM Bool := do
 
 script build do
   if ← runCmd "lake" #["exe", "mdgen", "Src", "md/build"] then return 1
-  if ← runCmd "lake" #["exe", "import_all", "Src"] then return 1
   if ← runCmd "mdbook" #["build"] then return 1
-  return 0
-
-script check do
-  if ← runCmd "lake" #["exe", "import_check", "Src"] then return 1
   return 0
