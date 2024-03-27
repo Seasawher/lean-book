@@ -24,9 +24,6 @@ Jump to the Lean4 Playground by clicking on the play button in the top right cor
 ### Easy Code Management
 The markdown files in this book are generated from Lean code using [mdgen](https://github.com/Seasawher/mdgen). There is no need to maintain separately the code examples and the text.
 
-### Automatic Import
-This book uses [import-all](https://github.com/Seasawher/import-all) to automatically generate import statements. Now you will never forget to add an import statement.
-
 ### Improved Search
 The mdbook does not support searches in languages other than English, but this book does support searches in other languages (e.g. Japanese)!
 
