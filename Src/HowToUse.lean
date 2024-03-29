@@ -2,7 +2,7 @@
 
 0. Install mdbook and Lean.
 
-1. Clone this repository. Alternatively, select "Use this template" from the GitHub web UI.
+1. Clone this repository. Alternatively, select "Use this template" from the GitHub web UI. **Do not fork** to use this repository. Fork only when you want to submit a PR.
 
 2. Change the directory name `Src` if you want. At the same time, replace `Src` in `lakefile.lean` and `filePlay.js`. And run `lake update`.
 
