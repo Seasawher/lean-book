@@ -4,7 +4,7 @@
 
 1. Clone this repository. Alternatively, select "Use this template" from the GitHub web UI. **Do not fork** to use this repository. Fork only when you want to submit a PR.
 
-2. Change the directory name `Src` if you want. At the same time, replace `Src` in `lakefile.lean` and `filePlay.js`. And run `lake update`.
+2. Change the package name `«Lean Book»` as you like. And run `lake update`.
 
 3. If you want to use mathlib, make changes to `ci.yml` to run `lake exe cache get`.
 

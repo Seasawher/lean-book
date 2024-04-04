@@ -10,5 +10,5 @@
    "inputRev": "v1.1.0",
    "inherited": false,
    "configFile": "lakefile.lean"}],
- "name": "Src",
+ "name": "«Lean Book»",
  "lakeDir": ".lake"}
