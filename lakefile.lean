@@ -13,7 +13,7 @@ lean_lib «Src» where
   globs := #[.submodules `Src] -- Build all files in the `Src` directory.
 
 require mdgen from git
-  "https://github.com/Seasawher/mdgen" @ "v1.1.0"
+  "https://github.com/Seasawher/mdgen" @ "v1.2.1"
 
 def runCmd (cmd : String) (args : Array String) : ScriptM Bool := do
   let out ← IO.Process.output {
