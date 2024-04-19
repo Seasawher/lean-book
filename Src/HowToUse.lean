@@ -2,7 +2,7 @@
 
 0. Install mdbook and Lean.
 
-1. Clone this repository. Alternatively, select "Use this template" from the GitHub web UI. **Do not fork** to use this repository. Fork only when you want to submit a PR.
+1. Clone this repository. **Do not fork** to use this repository. Fork only when you want to submit a PR. Don't select "Use this template" on GitHub UI if you want your repository to be indexed by Reservoir.
 
 2. Change the package name `«Lean Book»` as you like. And run `lake update`.
 
