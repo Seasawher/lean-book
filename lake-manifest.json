@@ -4,7 +4,7 @@
  [{"url": "https://github.com/Seasawher/mdgen",
    "type": "git",
    "subDir": null,
-   "rev": "c98c18fac8350be3d82f56dd1096dc2d4f314863",
+   "rev": "6a6a412465e82572f6e30385592eac52ab055c83",
    "name": "mdgen",
    "manifestFile": "lake-manifest.json",
    "inputRev": "main",
