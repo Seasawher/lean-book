@@ -1,10 +1,11 @@
-{"version": "1.0.0",
+{"version": "1.1.0",
  "packagesDir": ".lake/packages",
  "packages":
  [{"url": "https://github.com/Seasawher/mdgen",
    "type": "git",
    "subDir": null,
-   "rev": "6a6a412465e82572f6e30385592eac52ab055c83",
+   "scope": "",
+   "rev": "e705093e3cc1dbfd7f6ac8732ce19b395dccf272",
    "name": "mdgen",
    "manifestFile": "lake-manifest.json",
    "inputRev": "main",
