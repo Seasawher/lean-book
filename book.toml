@@ -14,6 +14,7 @@ build-dir = "book"
 no-section-label = false
 git-repository-url = "https://github.com/Seasawher/lean-book"
 edit-url-template = "https://raw.githubusercontent.com/Seasawher/lean-book/main/{path}"
+site-url = "https://seasawher.github.io/lean-book/"
 additional-js = [
   # Add "Run on Lean4 Playground" button to each code block
   "assets/blockPlay.js",
