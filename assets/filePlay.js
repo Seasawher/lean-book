@@ -7,7 +7,7 @@ function filePlay() {
   const playButtonLink = playButtonIcon.parentElement;
   playButtonLink.href = playButtonLink.href.replace(/\.md$/, ".lean");
   playButtonLink.href = playButtonLink.href.replace(
-    "/md/",
+    "/booksrc/",
     "/Src/",
   );
   fetch(playButtonLink.href)
