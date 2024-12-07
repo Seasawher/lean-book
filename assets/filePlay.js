@@ -10,6 +10,8 @@ function filePlay() {
     "/booksrc/",
     "/LeanBook/",
   );
+  console.info(`Referenced file: ${playButtonLink.href}`);
+
   fetch(playButtonLink.href)
     .then((response) => response.text())
     .then((body) => {
