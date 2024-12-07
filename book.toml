@@ -24,5 +24,9 @@ additional-js = [
 
   # Improve search functionality
   "assets/fzf.umd.js",
-  "assets/elasticlunr.js"
+  "assets/elasticlunr.js",
+
+  # add table of contents to each page
+  "assets/pagetoc.js",
 ]
+additional-css = ["assets/pagetoc.css"]
