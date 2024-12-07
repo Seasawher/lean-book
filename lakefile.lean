@@ -9,8 +9,8 @@ package «Lean Book» where
   ]
 
 @[default_target]
-lean_lib «Src» where
-  globs := #[.submodules `Src] -- Build all files in the `Src` directory.
+lean_lib «LeanBook» where
+  globs := #[.submodules `LeanBook] -- Build all files in the `LeanBook` directory.
 
 require mdgen from git
   "https://github.com/Seasawher/mdgen" @ "main"
@@ -26,6 +26,6 @@ def runCmd (cmd : String) (args : Array String) : ScriptM Bool := do
   return hasError
 
 script build do
-  if ← runCmd "lake" #["exe", "mdgen", "Src", "booksrc"] then return 1
+  if ← runCmd "lake" #["exe", "mdgen", "LeanBook", "booksrc"] then return 1
   if ← runCmd "mdbook" #["build"] then return 1
   return 0
