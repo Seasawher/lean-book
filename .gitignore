@@ -1,6 +1,7 @@
 # mdbook
 book
-md/build/*.md
+/md/*
+!md/SUMMARY.md
 
 # lean project
 .lake

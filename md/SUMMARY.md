@@ -1,5 +1,5 @@
 # Summary
 
-* [Introduction](./build/README.md)
+* [Introduction](./README.md)
 
-* [How to use](./build/HowToUse.md)
+* [How to use](./HowToUse.md)
