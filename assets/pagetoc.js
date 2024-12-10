@@ -1,4 +1,3 @@
-/** クライアントの環境がPCかどうか判定する */
 function isDesktop() {
   const userAgent = navigator.userAgent;
   const mobileRegex =
@@ -6,7 +5,6 @@ function isDesktop() {
   return !mobileRegex.test(userAgent);
 }
 
-/** 本体の処理 */
 function pageToc() {
   function forEach(elems, fun) {
     Array.prototype.forEach.call(elems, fun);
