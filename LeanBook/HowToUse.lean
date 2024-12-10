@@ -16,8 +16,9 @@ cargo install mdbook --version 0.4.35
 Clone this repository and remove it from `origin`. To do so, run the following command in your terminal.
 
 ```bash
-git clone https://github.com/Seasawher/lean-book.git
-cd lean-book
+mkdir your-book-dir
+cd your-book-dir
+git clone https://github.com/Seasawher/lean-book.git .
 git remote rename origin upstream
 ```
 
