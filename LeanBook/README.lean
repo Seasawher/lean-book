@@ -27,6 +27,10 @@ Automatically add a table of contents to each page.
 ## Easy Code Management
 The markdown files in this book are generated from Lean code using [mdgen](https://github.com/Seasawher/mdgen). There is no need to maintain separately the code examples and the text.
 
+## Automatically update Lean version
+
+The [lean-update](https://github.com/oliver-butterley/lean-update) action is configured in this repository, which periodically attempts to update the version of Lean and its libraries.
+
 ## Improved Search
 The mdbook does not support searches in languages other than English, but this book does support searches in other languages (e.g. Japanese)!
 
