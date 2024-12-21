@@ -38,6 +38,12 @@ jobs:
         with:
           mdbook-version: '0.4.35'
 
+      - name: install mdbook-admonish
+        uses: baptiste0928/cargo-install@v3
+        with:
+          crate: mdbook-admonish
+          version: '1.18.0'
+
       - name: build
         run: lake run build
 

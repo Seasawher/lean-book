@@ -40,4 +40,10 @@ You can use MathJax in this book. For example, $a^2 + b^2 = c^2$.
 $$
 ζ (s) = \sum_{n=1}^{\infty} \frac{1}{n^s}
 $$
+
+## Mdbook Admonish
+
+```admonish info
+mdbook-admonish is preinstalled!
+```
 -/

@@ -13,8 +13,13 @@ build-dir = "book"
 [output.html]
 no-section-label = false
 git-repository-url = "https://github.com/Seasawher/lean-book"
+
+# This is required to add "Run on Lean4 Playground" button to each page
 edit-url-template = "https://raw.githubusercontent.com/Seasawher/lean-book/main/{path}"
+
+# Necessary for 404 pages to work properly
 site-url = "https://seasawher.github.io/lean-book/"
+
 additional-js = [
   # Add "Run on Lean4 Playground" button to each code block
   "assets/blockPlay.js",
@@ -29,4 +34,16 @@ additional-js = [
   # add table of contents to each page
   "assets/pagetoc.js",
 ]
-additional-css = ["assets/pagetoc.css"]
+additional-css = [
+  # style for mdbook-admonish
+  "assets/mdbook-admonish.css",
+
+  # add table of contents to each page
+  "assets/pagetoc.css"
+]
+
+[preprocessor]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
