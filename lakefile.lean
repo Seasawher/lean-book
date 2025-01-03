@@ -31,6 +31,6 @@ def runCmd (input : String) : IO Unit := do
     IO.println out.stdout
 
 script build do
-  runCmd "lake exe mdgen LeanBook booksrc"
+  runCmd "lake exe mdgen LeanBook booksrc --count"
   runCmd "mdbook build"
   return 0
