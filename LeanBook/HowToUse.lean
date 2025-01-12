@@ -19,7 +19,7 @@ Clone this repository and remove it from `origin`. To do so, run the following c
 mkdir your-book-dir
 cd your-book-dir
 git clone https://github.com/Seasawher/lean-book.git .
-git remote rename origin upstream
+git remote remove origin
 ```
 
 **Do not fork** to use this repository. Fork only when you want to submit a PR.
@@ -47,4 +47,9 @@ Writing a book can be done in the same way as writing in mdbook.
 ## Publish
 
 Push to GitHub. The workflow for deploy has already been set up, so you can publish it as a web page by enabling deploy to GitHub Pages via GitHub Action from the repository settings.
+
+Note that:
+
+* **Your repository must be public**. If you are developing in a private repository and are tired of the deploy action failing, temporarily disable the action from running.
+* When deploying to GitHub Pages, please select "github actions" instead of "deploy from a branch".
 -/
