@@ -11,4 +11,4 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Update Lean project
-        uses: Seasawher/lean-update@main
+        uses: leanprover-community/lean-update@main
