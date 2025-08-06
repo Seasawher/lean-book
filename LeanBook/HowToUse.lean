@@ -4,11 +4,11 @@
 
 Install git, Lean and mdbook. The installation of git and Lean is not described here.
 
-I recommend using mdbook version `0.4.35`. Otherwise, the table of contents layout may be broken.
+I recommend using mdbook version `0.4.40`. Otherwise, the table of contents layout may be broken.
 
 ```bash
 # install mdbook
-cargo install mdbook --version 0.4.35
+cargo install mdbook --version 0.4.40
 ```
 
 ## clone this repository
