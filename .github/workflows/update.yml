@@ -1,11 +1,16 @@
 name: Update Lean
 on:
   schedule:
-    - cron: "0 11 * * *"
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
   update_lean:
+    # this is needed for private repositories
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
