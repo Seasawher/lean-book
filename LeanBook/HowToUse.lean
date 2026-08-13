@@ -59,6 +59,6 @@ Push to GitHub. The workflow for deploy has already been set up, so you can publ
 
 Note that:
 
-* **Your repository must be public**. If you are developing in a private repository and are tired of the deploy action failing, temporarily disable the action from running.
+* **Your repository must be public**. If your repository is public, the deploy workflow will not run.
 * When deploying to GitHub Pages, please select "github actions" instead of "deploy from a branch".
 -/
