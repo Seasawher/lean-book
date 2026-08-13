@@ -35,9 +35,12 @@ jobs:
           echo "$HOME/.elan/bin" >> $GITHUB_PATH
 
       - name: Setup mdBook
-        uses: peaceiris/actions-mdbook@v2
-        with:
-          mdbook-version: '0.4.48'
+        run: |
+          cargo install mdbook `
+            --version 0.4.48 `
+            --locked `
+            --root ./.cargo/mdbook
+        shell: pwsh
 
       - name: install mdbook-admonish
         uses: baptiste0928/cargo-install@v3
