@@ -2,14 +2,7 @@
 
 ## Basic Setup
 
-Install git, Lean and mdbook. The installation of git and Lean is not described here.
-
-I recommend using mdbook version `0.4.48`. Otherwise, the table of contents layout may be broken.
-
-```bash
-# install mdbook
-cargo install mdbook --version 0.4.48
-```
+Install git, Lean and Rust. The installation of git and Lean is not described here.
 
 ## clone this repository
 
@@ -25,6 +18,22 @@ git remote remove origin
 **Do not fork** to use this repository. Fork only when you want to submit a PR.
 
 Don't select "Use this template" on GitHub UI if you want your repository to be indexed by Reservoir.
+
+## install mdbook locally
+
+I recommend using mdbook version `0.4.48`. Otherwise, the table of contents layout may be broken.
+
+Because the latest version of mdbook is not used, install it under this repository to avoid conflicts with globally installed mdbook.
+
+```bash
+# install mdbook
+cargo install mdbook \
+  --version 0.4.48 \
+  --locked \
+  --root ./.cargo/mdbook
+```
+
+Via `lake exe mdbook`, you can use the `mdbook` installed in this repository.
 
 ## Customize as you need
 
@@ -42,7 +51,7 @@ Please modify the following items to suit your project:
 Writing a book can be done in the same way as writing in mdbook.
 
 1. After updating the Lean file, don't forget to run `lake run build`. This will generate markdown files with `mdgen`, HTML files with mdbook.
-1. Run `mdbook serve --open` to see the preview.
+1. Run `lake exe mdbook serve --open` to see the preview.
 
 ## Publish
 
