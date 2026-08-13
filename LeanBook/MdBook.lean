@@ -11,4 +11,4 @@ def main (args : List String) : IO Unit := do
     IO.eprintln out.stderr
     throw <| IO.userError s!"Failed to execute: mdbook {args}"
   else if !out.stdout.isEmpty then
-    IO.println out.stdout
+    IO.println out.stdout.trimAsciiEnd
