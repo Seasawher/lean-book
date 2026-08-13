@@ -30,7 +30,11 @@ def runCmd (input : String) : IO Unit := do
   else if !out.stdout.isEmpty then
     IO.println out.stdout
 
+/-- This is a wrapper for mdbook installed locally. -/
+lean_exe mdbook where
+  root := `LeanBook.MdBook
+
 script build do
   runCmd "lake exe mdgen LeanBook booksrc --count --exercise"
-  runCmd "mdbook build"
+  runCmd "lake exe mdbook build"
   return 0

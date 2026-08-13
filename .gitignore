@@ -5,3 +5,6 @@ book
 
 # lean project
 .lake
+
+# use this directory if you install mdbook locally
+.cargo
