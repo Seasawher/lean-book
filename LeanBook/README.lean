@@ -29,7 +29,7 @@ The markdown files in this book are generated from Lean code using [mdgen](https
 
 ## Automatically update Lean version
 
-The [lean-update](https://github.com/oliver-butterley/lean-update) action is configured in this repository, which periodically attempts to update the version of Lean and its libraries.
+The [lean-update](https://github.com/leanprover-community/lean-update) action is configured in this repository, which periodically attempts to update the version of Lean and its libraries.
 
 ## Improved Search
 The mdbook does not support searches in languages other than English, but this book does support searches in other languages (e.g. Japanese)!
