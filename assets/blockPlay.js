@@ -1,23 +1,30 @@
-Array.from(document.querySelectorAll(".language-lean")).forEach(function (code_block) {
-  let pre_block = code_block.parentElement;
+Array.from(document.querySelectorAll(".language-lean")).forEach(function (codeBlock) {
+  const preBlock = codeBlock.closest("pre");
+  if (!preBlock) return;
 
   // create a link to lean4 web editor
-  let escaped_code = encodeURIComponent(code_block.textContent);
-  let url = `https://live.lean-lang.org/#code=${escaped_code}`;
+  const escapedCode = encodeURIComponent(codeBlock.textContent);
+  const url = `https://live.lean-lang.org/#code=${escapedCode}`;
 
   // create a button
-  let buttons = pre_block.querySelector(".buttons");
-  let leanWebButton = document.createElement('button');
-  leanWebButton.className = 'fa fa-external-link lean-web-button';
-  leanWebButton.hidden = true;
-  leanWebButton.title = 'Run on lean4 playground';
+  let buttons = preBlock.querySelector(".buttons");
+  if (!buttons) {
+    buttons = document.createElement("div");
+    buttons.className = "buttons";
+    preBlock.insertBefore(buttons, preBlock.firstChild);
+  }
+
+  const leanWebButton = document.createElement("button");
+  leanWebButton.className = "lean-web-button";
+  leanWebButton.title = "Run on Lean 4 playground";
   leanWebButton.setAttribute('aria-label', leanWebButton.title);
+  leanWebButton.innerHTML = document.getElementById("fa-external-link").innerHTML;
 
   // insert the button
   buttons.insertBefore(leanWebButton, buttons.firstChild);
 
   // open the link when the button is clicked
-  leanWebButton.addEventListener('click', function (e) {
-    open(url);
+  leanWebButton.addEventListener("click", function () {
+    window.open(url, "_blank", "noopener");
   });
 });

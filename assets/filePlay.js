@@ -3,8 +3,8 @@
  * to link to the lean4 web editor
  */
 function filePlay() {
-  const playButtonIcon = document.querySelector("#lean-play-button");
-  const playButtonLink = playButtonIcon.parentElement;
+  const playButtonLink = document.querySelector("#lean-play-button");
+  if (!playButtonLink) return;
   playButtonLink.href = playButtonLink.href.replace(/\.md$/, ".lean");
   playButtonLink.href = playButtonLink.href.replace(
     "/booksrc/",
