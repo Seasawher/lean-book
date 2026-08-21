@@ -15,7 +15,7 @@
           "papersize": "a4",
           "fontsize": "10.5pt",
           "mainfont": "Arial",
-          "codefont": ["Cascadia Mono", "Noto Sans JP"],
+          "codefont": ["Cascadia Mono"],
           "margin": {
             "x": "2.5cm",
             "y": "2cm"

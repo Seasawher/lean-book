@@ -49,7 +49,7 @@ jobs:
       - name: Name PDF artifact
         id: pdf-artifact
         run: |
-          timestamp="$(TZ=Asia/Tokyo date +'%Y-%m-%d-%H%M%S')"
+          timestamp="$(TZ=UTC date +'%Y-%m-%d-%H%M%S')"
           filename="book-${timestamp}.pdf"
           mv typst/book.pdf "typst/${filename}"
           printf 'name=%s\n' "$filename" >> "$GITHUB_OUTPUT"

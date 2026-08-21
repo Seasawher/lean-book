@@ -29,7 +29,7 @@ pandoc --version
 typst --version
 ```
 
-The default PDF configuration uses the `Arial`, `Cascadia Mono`, and `Noto Sans JP` fonts.
+The default PDF configuration uses the `Arial` and `Cascadia Mono` fonts.
 Install these fonts or change the font settings described below if they are not available on your system.
 
 ## Build the PDF

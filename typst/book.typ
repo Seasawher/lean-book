@@ -10,12 +10,12 @@
   cols: 1,
   margin: (x: 25mm, y: 20mm),
   paper: "a4",
-  lang: "ja",
-  region: "JP",
+  lang: "en",
+  region: "US",
   font: ("Arial",),
   fontsize: 10.5pt,
   mathfont: none,
-  codefont: ("Cascadia Mono", "Noto Sans JP"),
+  codefont: ("Cascadia Mono",),
   linestretch: 1,
   sectionnumbering: none,
   linkcolor: none,
@@ -33,7 +33,7 @@
   )
 
   set text(
-    font: font + ("Noto Sans JP",),
+    font: font,
     size: fontsize,
     lang: lang,
     region: region,
@@ -89,42 +89,6 @@
       v(0.5em)
       align(right, text(size: 0.9em, style: "italic", it.attribution))
     }
-  ]
-
-  // Notes on Unicode input corresponding to the custom Markdown syntax `[!UNICODE]`
-  let unicode-alert-color = rgb("#0969da")
-  show <unicode-alert>: it => block(
-    width: 100%,
-    breakable: true,
-    stroke: (left: 3pt + unicode-alert-color),
-    inset: (left: 12pt, right: 0pt, y: 4pt),
-    above: 0.8em,
-    below: 0.8em,
-  )[
-    #block(breakable: false, sticky: true)[
-      #grid(
-        columns: (auto, auto),
-        column-gutter: 10pt,
-        align: center + horizon,
-        box(
-          width: 1.7em,
-          height: 1.35em,
-          stroke: 0.9pt + unicode-alert-color,
-          radius: 3pt,
-          align(
-            center + horizon,
-            text(
-              fill: unicode-alert-color,
-              size: 0.65em,
-              weight: "bold",
-            )[U+],
-          ),
-        ),
-        text(fill: unicode-alert-color, weight: "bold")[How to Enter Unicode Characters],
-      )
-    ]
-    #v(0.2em)
-    #it.body
   ]
 
   // Add an underline and spacing to section headings in x.y format
