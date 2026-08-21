@@ -37,3 +37,6 @@ additional-css = [
   # add table of contents to each page
   "assets/pagetoc.css"
 ]
+
+[output.html.print]
+enable = false
