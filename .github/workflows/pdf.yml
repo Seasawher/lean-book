@@ -1,0 +1,63 @@
+name: PDF
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build_pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Lean
+        uses: leanprover/lean-action@v1
+        with:
+          auto-config: false
+
+      - name: Install mdBook and mdbook-pandoc
+        run: |
+          cargo install mdbook --version 0.5.4 --locked
+          cargo install mdbook-pandoc --version 0.11.1 --locked
+
+      - name: Set up Pandoc
+        uses: pandoc/actions/setup@v1
+        with:
+          version: "3.10"
+
+      - name: Set up Typst
+        uses: typst-community/setup-typst@v5
+        with:
+          typst-version: "0.14.2"
+
+      - name: Build PDF
+        run: lake run build_pdf
+
+      - name: Name PDF artifact
+        id: pdf-artifact
+        run: |
+          timestamp="$(TZ=Asia/Tokyo date +'%Y-%m-%d-%H%M%S')"
+          filename="book-${timestamp}.pdf"
+          mv typst/book.pdf "typst/${filename}"
+          printf 'name=%s\n' "$filename" >> "$GITHUB_OUTPUT"
+          printf 'path=typst/%s\n' "$filename" >> "$GITHUB_OUTPUT"
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.pdf-artifact.outputs.name }}
+          path: ${{ steps.pdf-artifact.outputs.path }}
+          if-no-files-found: error
