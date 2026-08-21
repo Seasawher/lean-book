@@ -19,10 +19,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Install elan
-        run: |
-          curl https://elan.lean-lang.org/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
-          echo "$HOME/.elan/bin" >> $GITHUB_PATH
+      - name: Install Elan
+        uses: leanprover/lean-action@v1
+        with:
+          auto-config: false
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v2
