@@ -39,7 +39,7 @@ jobs:
           mdbook-version: '0.5.4'
 
       - name: build
-        run: lake run build
+        run: lake run build_html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5

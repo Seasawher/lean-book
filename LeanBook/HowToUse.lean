@@ -41,7 +41,7 @@ Please modify the following items to suit your project:
 
 Writing a book can be done in the same way as writing in mdbook.
 
-1. After updating the Lean file, don't forget to run `lake run build`. This will generate markdown files with `mdgen`, HTML files with mdbook.
+1. After updating the Lean file, don't forget to run `lake run build_html`. This will generate markdown files with `mdgen`, HTML files with mdbook.
 1. Run `mdbook serve --open` to see the preview.
 
 ## Publish

@@ -15,13 +15,16 @@ lean_lib «LeanBook» where
 require mdgen from git
   "https://github.com/Seasawher/mdgen" @ "main"
 
-def runCmd (input : String) : IO Unit := do
+abbrev Environment := Array (String × Option String)
+
+def runCmd (input : String) (env : Environment := #[]) : IO Unit := do
   let cmdList := input.splitOn " "
   let cmd := cmdList.head!
   let args := cmdList.tail |>.toArray
   let out ← IO.Process.output {
     cmd := cmd
     args := args
+    env := env
   }
   if out.exitCode != 0 then
     IO.eprintln out.stderr
@@ -29,7 +32,13 @@ def runCmd (input : String) : IO Unit := do
   else if !out.stdout.isEmpty then
     IO.println out.stdout.trimAscii.copy
 
-script build do
+script build_html do
   runCmd "lake exe mdgen LeanBook booksrc --count --exercise"
   runCmd "mdbook build"
+  return 0
+
+script build_pdf do
+  runCmd "lake exe mdgen LeanBook booksrc --count --exercise"
+  let outputConfig ← IO.FS.readFile "typst/pdf-output.json"
+  runCmd s!"mdbook build" #[("MDBOOK_OUTPUT", some outputConfig)]
   return 0
