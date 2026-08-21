@@ -15,7 +15,6 @@ lean_lib «LeanBook» where
 require mdgen from git
   "https://github.com/Seasawher/mdgen" @ "main"
 
-/-- Execute the given string in a shell -/
 def runCmd (input : String) : IO Unit := do
   let cmdList := input.splitOn " "
   let cmd := cmdList.head!
@@ -28,7 +27,7 @@ def runCmd (input : String) : IO Unit := do
     IO.eprintln out.stderr
     throw <| IO.userError s!"Failed to execute: {input}"
   else if !out.stdout.isEmpty then
-    IO.println out.stdout
+    IO.println out.stdout.trimAscii.copy
 
 script build do
   runCmd "lake exe mdgen LeanBook booksrc --count --exercise"
