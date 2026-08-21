@@ -20,10 +20,6 @@ All Lean code blocks in this book have a button that jumps to the Lean Playgroun
 ## Jump to Lean Playground from any page
 Jump to the Lean4 Playground by clicking on the play button in the top right corner of a page.
 
-## Table of Contents
-
-Automatically add a table of contents to each page.
-
 ## Easy Code Management
 The markdown files in this book are generated from Lean code using [mdgen](https://github.com/Seasawher/mdgen). There is no need to maintain separately the code examples and the text.
 

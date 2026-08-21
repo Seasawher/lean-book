@@ -13,6 +13,9 @@ build-dir = "book"
 no-section-label = false
 git-repository-url = "https://github.com/Seasawher/lean-book"
 
+# Show the headings of the current page in the sidebar
+sidebar-header-nav = true
+
 # This is required to add "Run on Lean4 Playground" button to each page
 edit-url-template = "https://raw.githubusercontent.com/Seasawher/lean-book/main/{path}"
 
@@ -29,13 +32,6 @@ additional-js = [
   # Improve search functionality
   "assets/fzf.umd.js",
   "assets/elasticlunr.js",
-
-  # add table of contents to each page
-  "assets/pagetoc.js",
-]
-additional-css = [
-  # add table of contents to each page
-  "assets/pagetoc.css"
 ]
 
 [output.html.print]

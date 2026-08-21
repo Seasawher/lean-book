@@ -2,13 +2,13 @@
 
 ## Basic Setup
 
-Install git, Lean and mdbook. The installation of git and Lean is not described here.
+Install git, Lean and mdBook. The installation of git and Lean is not described here.
 
-I recommend using mdbook version `0.5.0`. Otherwise, the table of contents layout may be broken.
+I recommend using mdBook version `0.5.4`. This template uses the sidebar heading navigation introduced in mdBook 0.5.
 
 ```bash
 # install mdbook
-cargo install mdbook --version 0.5.0
+cargo install mdbook --version 0.5.4
 ```
 
 ## clone this repository
