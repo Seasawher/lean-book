@@ -2,6 +2,9 @@ Array.from(document.querySelectorAll(".language-lean")).forEach(function (codeBl
   const preBlock = codeBlock.closest("pre");
   if (!preBlock) return;
 
+  const playIconTemplate = document.querySelector("#fa-play");
+  if (!playIconTemplate) return;
+
   // create a link to lean4 web editor
   const escapedCode = encodeURIComponent(codeBlock.textContent);
   const url = `https://live.lean-lang.org/#code=${escapedCode}`;
@@ -15,10 +18,11 @@ Array.from(document.querySelectorAll(".language-lean")).forEach(function (codeBl
   }
 
   const leanWebButton = document.createElement("button");
+  leanWebButton.type = "button";
   leanWebButton.className = "lean-web-button";
   leanWebButton.title = "Run on Lean 4 playground";
   leanWebButton.setAttribute('aria-label', leanWebButton.title);
-  leanWebButton.innerHTML = document.getElementById("fa-external-link").innerHTML;
+  leanWebButton.appendChild(playIconTemplate.content.cloneNode(true));
 
   // insert the button
   buttons.insertBefore(leanWebButton, buttons.firstChild);
