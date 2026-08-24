@@ -34,5 +34,10 @@ additional-js = [
   "assets/elasticlunr.js",
 ]
 
+additional-css = [
+  # Keep the code-block copy and playground buttons the same size
+  "assets/codeBlockButtons.css",
+]
+
 [output.html.print]
 enable = false
